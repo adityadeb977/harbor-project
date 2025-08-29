@@ -2,6 +2,10 @@
 
 Harbor is a web application that predicts your stress level based on input data and provides AI-powered recommendations using Google's Gemini API. The project consists of a React (Vite) frontend and a FastAPI backend with a machine learning model.
 
+## 🚀 Live Demo
+- **Frontend:** (https://harbor-project.vercel.app)
+- **Backend API:** (https://harbor-project.onrender.com)
+
 ---
 
 ## Features
@@ -84,10 +88,43 @@ npm install
 
 ## Deployment
 
-- **Frontend:** Deploy the `frontend` folder to Vercel or Netlify.
-- **Backend:** Deploy the `backend` folder to a Python-friendly host (e.g., Railway, Render, Fly.io).
+This project is deployed using:
+- **Frontend:** Vercel ([Live Demo](https://harbor-project.vercel.app))
+- **Backend:** Render ([API Endpoint](https://harbor-project.onrender.com))
 
-> **Note:** Vercel serverless functions may not support heavy ML dependencies. For best results, use a dedicated Python host for the backend.
+### Deploy Your Own
+
+#### Frontend (Vercel)
+1. Fork this repository
+2. Connect your GitHub repo to Vercel
+3. Set root directory to `frontend`
+4. Add environment variable: `VITE_API_BASE_URL=your-backend-url`
+5. Deploy
+
+#### Backend (Render/Railway/Fly.io)
+1. Create a new service on your preferred platform
+2. Connect your GitHub repo
+3. Set root directory to `backend`
+4. Add environment variable: `GEMINI_API_KEY=your-api-key`
+5. Deploy
+
+---
+
+## API Endpoints
+
+- `GET /` - Health check
+- `POST /predict` - Stress level prediction
+- `POST /recommend` - AI recommendations
+
+---
+
+## Tech Stack
+
+- **Frontend:** React, Vite, JavaScript
+- **Backend:** FastAPI, Python
+- **ML:** scikit-learn, joblib
+- **AI:** Google Gemini API
+- **Deployment:** Vercel (Frontend) + Render (Backend)
 
 ---
 
@@ -99,6 +136,10 @@ MIT
 
 ## Credits
 
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Vite](https://vitejs.dev/)
+- [scikit-learn](https://scikit-learn.org/)
+- [Google Gemini API](https://ai.google.dev/)
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [Vite](https://vitejs.dev/)
 - [scikit-learn](https://scikit-learn.org/)
