@@ -67,6 +67,9 @@ class StressInput(BaseModel):
     peer_pressure: int
     extracurricular_activities: int
     bullying: int
+@app.get("/")
+def read_root():
+    return {"status": "healthy"}
 
 @app.post("/predict")
 def predict_stress(data: StressInput):
